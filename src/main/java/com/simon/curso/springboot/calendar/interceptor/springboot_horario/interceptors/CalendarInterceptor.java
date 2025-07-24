@@ -52,7 +52,7 @@ public class CalendarInterceptor implements HandlerInterceptor {
         message.append(close);
         message.append(" hrs. Gracias!");
         data.put("message", message.toString());
-        data.put("date", new Date());
+        data.put("date", new Date().toString());
         response.setContentType("application/json");
         response.setStatus(401);
         response.getWriter().write(objectMapper.writeValueAsString(data));
